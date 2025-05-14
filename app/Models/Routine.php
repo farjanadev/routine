@@ -11,8 +11,9 @@ class Routine extends Model
 
     protected $fillable = [
         'subject',
-        'teacher',
+        'task',
         'day',
+        'shift',
         'start_time',
         'end_time',
     ];

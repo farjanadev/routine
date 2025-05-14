@@ -13,8 +13,8 @@
                 <input type="text" name="subject" class="w-full border p-2" required>
             </div>
             <div class="mt-4">
-                <label>Teacher</label>
-                <input type="text" name="teacher" class="w-full border p-2" required>
+                <label>Task</label>
+                <input type="text" name="task" class="w-full border p-2" required>
             </div>
             <div class="mt-4">
                 <label>Day</label>
@@ -27,6 +27,17 @@
                     <option>Thursday</option>
                 </select>
             </div>
+
+            <div class="mt-4">
+                <label>Shift</label>
+                <select name="shift" class="w-full border p-2">
+                    <option>morning</option>
+                    <option>afternoon</option>
+                    <option>night</option>
+                  
+                </select>
+            </div>
+
             <div class="mt-4">
                 <label>Start Time</label>
                 <input type="time" name="start_time" class="w-full border p-2" required>

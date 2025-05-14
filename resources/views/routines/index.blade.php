@@ -31,8 +31,9 @@
             <thead class="bg-gray-100">
                 <tr>
                     <th class="border border-gray-300 px-4 py-2 text-left">Subject</th>
-                    <th class="border border-gray-300 px-4 py-2 text-left">Teacher</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Task</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Day</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left">Shift</th>
                     <th class="border border-gray-300 px-4 py-2 text-left">Time</th>
                     <th class="border border-gray-300 px-4 py-2 text-center">Actions</th>
                 </tr>
@@ -41,8 +42,9 @@
                 @forelse ($routines as $routine)
                     <tr class="border-t border-gray-200 hover:bg-gray-50">
                         <td class="border px-4 py-2">{{ $routine->subject }}</td>
-                        <td class="border px-4 py-2">{{ $routine->teacher }}</td>
+                        <td class="border px-4 py-2">{{ $routine->task }}</td>
                         <td class="border px-4 py-2">{{ $routine->day }}</td>
+                          <td class="border px-4 py-2">{{ $routine->shift }}</td>
                         <td class="border px-4 py-2">{{ $routine->start_time }} - {{ $routine->end_time }}</td>
                         <td class="border px-4 py-2 text-center">
                             <a href="{{ route('routines.edit', $routine->id) }}" class="text-blue-600 hover:underline mr-3">✏️ Edit</a>

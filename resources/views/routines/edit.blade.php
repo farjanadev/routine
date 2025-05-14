@@ -18,13 +18,18 @@
                     </div>
 
                     <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700">Teacher</label>
-                        <input type="text" name="teacher" value="{{ old('teacher', $routine->teacher) }}" class="mt-1 block w-full border border-gray-300 rounded p-2" required>
+                        <label class="block text-sm font-medium text-gray-700">Task</label>
+                        <input type="text" name="task" value="{{ old('task', $routine->task) }}" class="mt-1 block w-full border border-gray-300 rounded p-2" required>
                     </div>
 
                     <div class="mb-4">
                         <label class="block text-sm font-medium text-gray-700">Day</label>
                         <input type="text" name="day" value="{{ old('day', $routine->day) }}" class="mt-1 block w-full border border-gray-300 rounded p-2" required>
+                    </div>
+
+                       <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700">Shift</label>
+                        <input type="text" name="shift" value="{{ old('shift', $routine->shift) }}" class="mt-1 block w-full border border-gray-300 rounded p-2" required>
                     </div>
 
                     <div class="mb-4">

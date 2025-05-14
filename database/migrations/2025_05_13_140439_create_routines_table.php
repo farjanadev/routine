@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('routines', function (Blueprint $table) {
             $table->id();
             $table->string('subject');
-            $table->string('teacher');
+            $table->string('task');
             $table->string('day');
+            $table->string('shift');
             $table->time('start_time');
             $table->time('end_time');
             $table->timestamps();

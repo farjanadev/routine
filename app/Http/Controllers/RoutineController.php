@@ -31,16 +31,18 @@ class RoutineController extends Controller
     {
         $request->validate([
             'subject' => 'required',
-            'teacher' => 'required',
+            'task' => 'required',
             'day' => 'required',
+            'shift' => 'required',
             'start_time' => 'required',
             'end_time' => 'required',
         ]);
 
         Routine::create($request->only([
             'subject',
-            'teacher',
+            'task',
             'day',
+            'shift',
             'start_time',
             'end_time',
         ]));
@@ -75,8 +77,9 @@ class RoutineController extends Controller
     {
         $request->validate([
             'subject' => 'required',
-            'teacher' => 'required',
+            'task' => 'required',
             'day' => 'required',
+            'shift' => 'required',
             'start_time' => 'required',
             'end_time' => 'required',
         ]);
@@ -86,7 +89,7 @@ class RoutineController extends Controller
 
         // ✅ Then update it
         $routine->update($request->only([
-            'subject', 'teacher', 'day', 'start_time', 'end_time',
+            'subject', 'task', 'day','shift', 'start_time', 'end_time',
         ]));
 
         return redirect()->route('routines.index')->with('success', 'Routine updated successfully.');
